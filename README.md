@@ -4,7 +4,7 @@ By Zhekun Luo, Devin Guillory, Baifeng Shi, Wei Ke, Fang Wan, Trevor Darrell, Hu
 
 ### Introduction
 
-Weakly-supervised action localization requires training a model to localize the action segments in the video given only video level action label. It can be solved under the Multiple Instance Learning (MIL) framework, where a bag (video) contains multiple instances (action segments). Since only the bag's label is known, the main challenge is assigning which key instances within the bag to trigger the bag's label. Most previous models use attention-based approaches applying attentions to generate the bag's representation from instances, and then train it via the bag's classification. These models, however, implicitly violate the MIL assumption that instances in negative bags should be uniformly negative. In this work, we explicitly model the key instances assignment as a hidden variable and adopt an Expectation-Maximization (EM) framework. We derive two pseudo-label generation schemes to model the E and M process and iteratively optimize the likelihood lower bound. We show that our EM-MIL approach more accurately models both the learning objective and the MIL assumptions. It achieves state-of-the-art performance on two standard benchmarks, THUMOS14 and ActivityNet1.2.
+Weakly-supervised action localization requires training a model to localize the action segments in the video given only video level action label. It can be solved under the Multiple Instance Learning (MIL) framework, where a bag (video) contains multiple instances (action segments). In this work, we explicitly model the key instances assignment as a hidden variable and adopt an Expectation-Maximization (EM) framework. We derive two pseudo-label generation schemes to model the E and M process and iteratively optimize the likelihood lower bound.
 
 ### License
 
@@ -29,11 +29,7 @@ If you find EM-MIL useful in your research, please consider citing:
 
 We build our model based on UntrimmedNet, THUMOS14 and ActivityNet1.2 dataset. Please cite the following papers as well:
 
-Wang, L., Xiong, Y., Lin, D., Van Gool, L.: Untrimmednets for weakly supervised action recognition and detection. In: Proceedings of the IEEE conference on Computer Vision and Pattern Recognition. pp. 4325–4334 (2017) 
-
-Jiang, Y.G., Liu, J., Zamir, A.R., Toderici, G., Laptev, I., Shah, M., Sukthankar, R.: THUMOS Challenge: Action Recognition with a Large Number of Classes. http://crcv.ucf.edu/THUMOS14/ (2014) 
-
-Heilbron, F.C., Escorcia, V., Ghanem, B., Niebles, J.C.: ActivityNet: A LargeScale Video Benchmark for Human Activity Understanding. In: IEEE Conference on Computer Vision and Pattern Recognition. pp. 961–970 (2015) 
+Wang, Limin, Yuanjun Xiong, Dahua Lin, and Luc Van Gool. "Untrimmednets for weakly supervised action recognition and detection." In Proceedings of the IEEE conference on Computer Vision and Pattern Recognition, pp. 4325-4334. 2017.
 
 ### Preparation:
 
